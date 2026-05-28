@@ -14,15 +14,19 @@ const port = process.env.PORT || 5000;
 
 // MIDDLEWARE
 
+
 app.use(
   cors({
     origin: [
       "http://localhost:5174",
-      "https://your-client-name.vercel.app",
+      "https://utility-bill-management-a249f.web.app",
+      "https://utility-bill-management-a249f.firebaseapp.com",
     ],
     credentials: true,
   })
 );
+
+
 
 app.use(express.json());
 app.use(cookieParser());
